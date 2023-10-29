@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Tambah Post</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+
+    <p>Job Posting</p>
+    <form action="add_post.php" method="post">
+        
+        <label for="isi">
+        <textarea name="isi" id="isi" rows="4" required></textarea>
+        
+
+        <input type="upload" value="upload Foto">
+        
+        <input type="submit" value="Posting">
+    </form>
+
+
+
+<style>/* ---------css----------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+p {
+    color: #333;
+    text-align: left;
+}
+
+form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="upload"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+</style>
+
+
+<script> // php file file disimpan posting di database
+<?php
+if ($_SERVER['REQUEST_METHOD'] = 'POST') {
+    $isi = $_POST['isi'];
+        
+    // Simpan posting data post ke database atau tempat penyimpanan lainnya
+    // Misalnya, Anda bisa menggunakan MySQL, SQLite, atau file teks.
+    
+    // Setelah data disimpan, Anda bisa mengalihkan pengguna ke halaman lain, seperti halaman daftar posting.
+    // Misalnya: header("Location: daftar_post.php");
+}
+?>
+</script>
+<!-- end -->
+
+</body>
+</html>
